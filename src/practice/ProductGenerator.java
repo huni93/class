@@ -40,23 +40,17 @@ public class ProductGenerator {
 			if (input.equals("9999")) {
 				break;
 			}
-
-			// map 하기전
-			/*
-			 * for (int i=0; i < li.size(); i++) { if (li.get(i).stno.equals(input)) {
-			 * System.out.println((i+1) + "등:" + li.get(i)); } }
-			 */
 			List<Ramen> sli = map.get(input);
 			for (Ramen s : sli) {
 				System.out.println(s);
 			}
 		}
-
 		/*
 		 * 1. (합계) 내림차순 프린트 2. stno를 입력해서 등수 확인
 		 */
 	}
 }
+
 class Ramen {
 	String review;
 	String name;
@@ -77,5 +71,4 @@ class Ramen {
 	public String toString() {
 		return "ramen [name=" + name + ",region=" + region + " , month=" + month + ", ea=" + ea + "]";
 	}
-
 }
