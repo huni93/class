@@ -17,7 +17,6 @@ public class ExCollection03 {
 			 lotto.add((int) (Math.random() * 45) + 1);
 		 }
 		 System.out.println(lotto);
- 
 	}
 
 }
