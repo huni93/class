@@ -69,6 +69,7 @@ class Ramen {
 
 	@Override
 	public String toString() {
-		return "ramen [name=" + name + ",region=" + region + " , month=" + month + ", ea=" + ea + ", review=" + review + "]";
+		return "ramen [name=" + name + ",region=" + region + " ,"
+				   + " month=" + month + ", ea=" + ea + ", review=" + review + "]";
 	}
 }
