@@ -1,0 +1,64 @@
+4일차 (10-23)
+
+it언어
+
+https://www.w3schools.com/
+
+eclipse-2022.12(4.26)->java and web->windows버전
+
+자바플랫폼 jsp프로그램
+
+1.java : open jdk-17   download(url->windows버전)
+
+2.IDE : 개발  Tool : eclipse(오픈 개발) , vscode(많이씀)
+
+3.web플랫폼 : JSP!! : heml을 간편개발->crome / JavaScript
+         
+vue, reaet => 자바스크립트
+
+database  : oracle(oracle insert/오라클 데이터 수정) , 마리아(mysql)
+
+파이썬(python)-언어
+
+**********환경설정************
+
+내pc->속성->환경변수->변수이름JAVA_HOME
+                    변수 값->C:\Program Files\jdk-17
+
+
+PATH->C:\Program Files\jdk-17bin
+
+->명령 프롬프트로 확인
+
+->이클립스 실행
+
+maven project
+
+web=dynamic web project
+
+java = create a project-> 모듈 해제 =>대소문자 구분
+
+이름 = javapro
+
+java->new->package->ch02_var
+
+->new class->클래스면(첫글자는 대문자로)
+
+->메인 체크후 피니쉬
+
+***************************************************
+객체지향(Object-Oriented)
+
+변수    (값을 저장할 수 이쓴 메모리상의 공간을 의미한다.)
+          -> 기본형/참조형   ,숫자로 시작해서는 안 된다.
+메소드 (기능을 수행하는 이름)
+객체 단위로 객체하나하나 주소를 할당하는걸 객체단위라고 한다.
+
+***메소드+변수=객체지향
+
+자바 - compiiler  
+자바 - interpreter
+
+자바스크립트는 사용자와 상호작용하는 기능이다.
+
+

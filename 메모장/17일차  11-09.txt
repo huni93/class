@@ -1,0 +1,8 @@
+17일차  11-09
+
+ch12_genEnumAnno  --  EnumEx1~3
+
+ch11_collection  --   ListEx1~5, ArrayListLinkedListTest,
+                      VectorEx1, SetEx1~3
+
+ctrl + shift + f = form깔끔

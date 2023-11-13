@@ -1,0 +1,33 @@
+9일차 10 -30
+
+
+ExArray 07~ 11 , ch06
+
+객체 지향
+  
+                 kic.java -> javas ->kic.class 
+
+class. kic { ~
+
+ =>변수    int [] num = new int [10];
+           String str = "kic";
+           int val = 50;
+
+
+ => 메소드 
+>  접근제어자
+   public  / return Type=void  / method명(parameter Type) {}
+
+ => 메소드
+ -> public void method1(String str) {syso (str);   }
+   public int methode2 (int a)  {return a+50;}
+ 
+ 속성(변수)과 기능(메소드)
+객체는 속성과 기능, 두 종류의 구성요소로 이루어져 있따.
+속성( property) -> 멤버변수 (variable)
+기능( function) -> 메소드 (method)
+
+클래스명 변수명;
+변수명 =  new 클래스명 (); = > 클래스의 객체를 생성 후, 
+                                          객체의 주소를 참조변수에 저장
+*********인스턴스 = 주소********

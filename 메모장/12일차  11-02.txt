@@ -1,0 +1,17 @@
+12일차  11-02
+
+ExOop08 , SuperEx1~3 , Modifier, Casting ,
+ InstanceOf, Packgae , ***SingletonEx , Exoop201~203
+
+정보처리기사.자격증
+
+상속
+1.내안에 부모 (Parent) 있다
+2.상속간에는 주소를 공유 할 수 있다  (casting)
+child = (child) parent
+parent = child
+3.child 생성자는 항상 parent 생성자를 먼저 구현 한다.
+super 생성자를 생략하면 super에 default 생성자를 실행한다
+
+4. 변수는 재정의 되지 않는다
+메소드는 재정의 된다

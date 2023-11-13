@@ -1,0 +1,31 @@
+14일차  11-06
+
+ExOop 205 ,
+
+ch07_inter-FinalClass,FinalMethod,FinalValue,
+         ExInterface01~03,DefaultInterfaceEx1,ComplexerEx1
+
+ch07_inner-InnerEx1~4
+
+
+
+***추상클래스는 new생성자로 만들수 없다.
+
+인터페이스!!
+자바는 다중상속을 지원하지 않는다.
+인터페이스는 기본적으로 멤버변수와 추상메서드의 집합이다.
+
+인터페이스에 들어있는 메서드는  항상  public abstract이다.
+인터페이스의 멤버변수는 항상 public static final이다.
+
+interface Draw {   // 인터페이스 선언 
+  int x=5;  멤버변수
+public abstrack test(); //추상메서드
+
+인터페이스를 상속받을때에는 extends대신 implements를 사용한다.
+->인터페이스간의 상속은 extends를사용한다.
+
+여러개의 인터페이스를 쉼표를 사용하여 나열된다.
+
+final이 붙은 클래스는 상속불가. 오버라이딩도 불가
+
