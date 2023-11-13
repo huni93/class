@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class ProductGenerator {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		Scanner sc = new Scanner(new File("src/ch11_collection/product.txt"));
+		Scanner sc = new Scanner(new File("src/ch11_collection/product1.txt"));
 		List<Ramen> li = new ArrayList<Ramen>();
 		Map<String, List<Ramen>> map = new HashMap<>();
 

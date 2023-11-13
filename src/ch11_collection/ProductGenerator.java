@@ -16,7 +16,7 @@ public class ProductGenerator {
 		int limit = 0;
 		int con = 0;
 		try {
-			fos = new FileOutputStream("src/ch11_collection/product.txt");
+			fos = new FileOutputStream("src/ch11_collection/product1.txt");
 			ps = new PrintStream(fos);
 			while (limit++ < 100) {
 				ps.print((int) (Math.random() * 12) + 1 + ",");// 1~12월까지의 판매월
