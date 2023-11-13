@@ -1,5 +1,6 @@
 package ch11_collection;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /*
@@ -19,17 +20,15 @@ public class ExCollection02 {
 	public static void main(String[] args) {
 		Set<Student> set = new HashSet<Student>();
 		set.add(new Student("1234","홍길동","경영"));
-	    set.add(new Student("2345","홍길순","경영"));
-	    set.add(new Student("2345","홍길순","컴공")); //추가 불가
-	    set.add(new Student("1234","홍길동","통계")); //추가 불가
-	    set.add(new Student("4567","홍길동","경영"));
-	    System.out.println("등록 학생 수:" + set.size());  //3
-	    for (Student s : set) { 
-			System.out.println(s);
-		}
-	}
+		set.add(new Student("2345","홍길순","경영"));
+		set.add(new Student("2345","홍길순","컴공")); //추가 불가
+		set.add(new Student("1234","홍길동","통계")); //추가 불가
+		set.add(new Student("4567","홍길동","경영"));
+		System.out.println("등록 학생 수:" + set.size()); //3
+		for (Student s : set) {			System.out.println(s);		}
+	}}
 
-class Student  {
+class Student {
 	String studno;
 	String name;
 	String major;
@@ -41,8 +40,20 @@ class Student  {
 	}
 	@Override
 	public String toString() {
-	return "Student [studno=" + studno + ",name="
-	                          + name + ", major="];
+		return "Student [studno=" + studno + ", name=" + name + ", major=" + major + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		Student s  = (Student) obj;
+		return studno.equals(s.studno) && name.equals(s.name);
+	}
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		
+		return studno.hashCode()+name.hashCode();
 }
 }
