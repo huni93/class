@@ -20,8 +20,11 @@ public class ProductGenerator {
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine(); // 한줄읽기
 			String[] str = line.split(",");
-			Ramen s = new Ramen(Integer.parseInt(str[0]), str[1], str[2], Integer.parseInt(str[3]), str[4]);
-
+			Ramen s = new Ramen(Integer.parseInt(str[0]),
+								str[1],
+								str[2],
+								Integer.parseInt(str[3]),
+								str[4]);
 			li.add(s);
 			if (!map.containsKey(s.name)) {
 				map.put(s.name, new ArrayList<Ramen>());
@@ -30,9 +33,7 @@ public class ProductGenerator {
 			tli.add(s);
 
 			map.put(s.name, tli);
-
 		}
-
 		Scanner sc2 = new Scanner(System.in);
 		System.out.println("라면을 입력 하세요. end (9999)");
 		while (true) {
@@ -43,13 +44,7 @@ public class ProductGenerator {
 			List<Ramen> sli = map.get(input);
 			for (Ramen s : sli) {
 				System.out.println(s);
-			}
-		}
-		/*
-		 * 1. (합계) 내림차순 프린트 2. stno를 입력해서 등수 확인
-		 */
-	}
-}
+			}		}	}}
 
 class Ramen {
 	String review;
@@ -66,7 +61,6 @@ class Ramen {
 		this.month = month;
 		this.ea = ea;
 	}
-
 	@Override
 	public String toString() {
 		return "ramen [name=" + name + ",region=" + region + " ,"
