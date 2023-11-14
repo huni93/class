@@ -3,8 +3,6 @@ package practice;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,11 +18,7 @@ public class ProductGenerator {
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine(); // 한줄읽기
 			String[] str = line.split(",");
-			Ramen s = new Ramen(Integer.parseInt(str[0]),
-								str[1],
-								str[2],
-								Integer.parseInt(str[3]),
-								str[4]);
+			Ramen s = new Ramen(Integer.parseInt(str[0]), str[1], str[2], Integer.parseInt(str[3]), str[4]);
 			li.add(s);
 			if (!map.containsKey(s.name)) {
 				map.put(s.name, new ArrayList<Ramen>());
@@ -44,7 +38,11 @@ public class ProductGenerator {
 			List<Ramen> sli = map.get(input);
 			for (Ramen s : sli) {
 				System.out.println(s);
-			}		}	}}
+			}
+		}
+		
+	}
+}
 
 class Ramen {
 	String review;
@@ -52,7 +50,7 @@ class Ramen {
 	String region;
 	int month;
 	int ea;
-
+	
 	public Ramen(int month, String region, String name, int ea, String review) {
 		super();
 		this.review = review;
@@ -61,9 +59,12 @@ class Ramen {
 		this.month = month;
 		this.ea = ea;
 	}
+
 	@Override
 	public String toString() {
-		return "ramen [name=" + name + ",region=" + region + " ,"
-				   + " month=" + month + ", ea=" + ea + ", review=" + review + "]";
+		return "ramen [name=" + name + ",region=" + region + " ," + " month=" + month + ", ea=" + ea + ", review="
+				+ review + "]";
 	}
 }
+
+
