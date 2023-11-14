@@ -49,7 +49,7 @@ public class ExCollection05 {
 		}
 		
 		
-		System.out.println("2) 월별 \t 생산 \t 판맨 \t 반품 합계현황");
+		System.out.println("2) 월별 \t 생산 \t 판매 \t 반품 합계현황");
 		
 		it = tlist.iterator();
 		Map <Integer, int[]> map2 = new HashMap<>();
