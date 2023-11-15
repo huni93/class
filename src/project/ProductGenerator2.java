@@ -85,7 +85,6 @@ public class ProductGenerator2 {
 				System.out.println("입력하신 상품이 없습니다.");
 			}
 		}
-
 	}
 }
 
