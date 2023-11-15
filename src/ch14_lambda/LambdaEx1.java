@@ -1,4 +1,4 @@
-package ch14_lambdaStream;
+package ch14_lambda;
 /*
  * 람다식 예제 : jdk 8.0 이후 버전에서 사용가능.
  * 람다식에서 사용할 수 있는 인터페이스는 반드시 FunctionalInterface여야함
