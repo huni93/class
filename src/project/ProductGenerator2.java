@@ -3,6 +3,7 @@ package project;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -33,16 +34,18 @@ public class ProductGenerator2 {
 		System.out.println("1) 월별 리스트");
 
 		Iterator<Ramen> it = li.iterator();
-		Map<String, List<Ramen>> map1 = new HashMap<>();
+		Map<String, List<Ramen>> map1 = new TreeMap<>();
 		while (it.hasNext()) {
 			Ramen s = it.next();
-			if (!map1.containsKey(s.month))
-				map1.put(s.month, new ArrayList());
-			map1.get(s.month).add(s);
+			String key = ((s.month.length() != 1) ? s.month : "0" + s.month);
+			if (!map1.containsKey(key))
+				map1.put(key, new ArrayList());
+			map1.get(key).add(s);
 		}
-
+		
+       
 		System.out.println(map1.keySet());
-
+        
 		for (String m : map1.keySet()) {
 			System.out.println(m + "월==================");
 			for (Ramen p : map1.get(m)) {
@@ -70,6 +73,9 @@ public class ProductGenerator2 {
 			System.out.println();
 		}
 		Scanner sc2 = new Scanner(System.in);
+		System.out.println("신라면" + " " + "진라면" + " " + "짜파게티" + " " + "너구리" + " "
+		+ "안성탕면" + " " + "불닭볶음면" + " " + "육개장" + " " + "비빔면" + " " + "삼양라면" + " "
+	    + "왕뚜껑" + " " + " 택 1 ");
 		System.out.println("라면을 입력 하세요. end (9999)");
 		while (true) {
 			String input = sc2.nextLine();
