@@ -5,6 +5,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /*
+ * Stream 생성하기
  * Array to Stream
  * stream<String> strStream = Arrays.stream(strArray); 
  */

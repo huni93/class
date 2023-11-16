@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 
 
 /*
+ * Stream 생성하기
  * File에서 읽은 내용을 스트림으로 생성하기
  * Path에서 읽은 파일 이름을 프린트 하기 
  */
