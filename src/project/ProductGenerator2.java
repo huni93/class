@@ -60,7 +60,7 @@ public class ProductGenerator2 {
 		System.out.println("2) 월별 제품별 판매횟수");
 		Map<String, Integer> map2 = new TreeMap<String, Integer>();
 		for (Ramen s : li) {
-			String key = ((s.month.length() != 1) ? s.month : "0" + s.month) + ":" + s.name;
+			String key = ((s.month.length() != 1) ? s.month : "0" +  s.month) + ":" + s.name;
 			if (!map2.containsKey(key))
 				map2.put(key, 0);
 			map2.put(key, map2.get(key) + 1); //판매라면이있으면 +1 증가
