@@ -1,0 +1,22 @@
+30일차  11-29
+
+자바 스크립트의 활용
+
+자바스크립트(Java Script)는 웹 브라우저에서 사용하는 프로그래밍 언어
+
+Node.js의 장단점
+- 웹 서버 애플리케이션을 개발할 떄 꼭 필요한 간단한 모듈만 제공하므로 데이터 
+처리와 예외 처리 등이 조금복잡
+
+- 빠른 속도로 서버 구매 비용과 유지 비용이 1/10 수준
+
+SQL> exec dbms_xdb.sethttpport(9090)
+-> 중복코드 바꾸는방법
+
+자료형 (data type) 자료 형태에 따라 나눠 놓은 것
+숫자 number , 문자열 string , 불 boolean 자료형 총 6개!
+
+=== 양쪽이 타입까지 같다
+!== 양쪽이 다르다
+
+typeof 연산자는 결과로 string, number,boolean,undefined,function,symbol,bigint 중 하나를 출력
