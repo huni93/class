@@ -19,4 +19,7 @@ SQL> exec dbms_xdb.sethttpport(9090)
 === 양쪽이 타입까지 같다
 !== 양쪽이 다르다
 
-typeof 연산자는 결과로 string, number,boolean,undefined,function,symbol,bigint 중 하나를 출력
+typeof 연산자는 결과로 string, number,boolean,undefined,function 
+기본 6개
+
+--> 특수한 경우 symbol,bigint 중 하나를 출력
