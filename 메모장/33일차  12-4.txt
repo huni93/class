@@ -1,0 +1,71 @@
+33일차  12-4
+
+자바 스크립트
+
+문서 객체 가져오기
+⁃ document.body 코드를 사용하여 문서의 body 요소 읽기
+document.head
+document.body
+document.title
+
+⁃ head 요소와 body 요소 내부에 맊든 다른 요소들은 다음과 같은 별도의 메소드를 사용
+document.querySelector(선택자)
+document.querySelectorAll(선택자)
+
+이름               선택자 형태            설명
+태그 선택자      태그                     특정 태그를 가진 요소를 추출
+아이디선택자    #아이디                 특정 id 속성을 가진 요소를 추출
+클래스선택자    .클래스                 특정 class 속성을 가진 요소를 추출
+속성 선택자     [속성=값]          특정 속성 값을 갖고 있는 요소를 추출
+후손 선택자     선택자_A 선택자_B  선택자_A 아래에 있는 선택자 _B를 선택
+
+
+css속성이름                 자바스크립트 style 속성 이름
+background-color       backgroundColor
+text-align             textAlign
+font-size              fontsize
+
+스타일 조작하기 3 가지
+h1.style.backgroundColor    .. 이 형태를 가장 많이 사용
+h1.style['backgroundColor']
+h1.style['background-Color']
+
+문서 객체 생성하기
+-document.createElement() 메소드를 사용 : 객체를 만든다(추가 하지 않은 객체임)
+-----> document.createElement(문서 객체 이름)
+
+문서 객체 트리(tree) 구조
+- 문서를 어떤 문서 아래에 추가할 지를 지정
+부모 객체.appendChild(자식 객체)
+
+문서 객체 제거하기
+-removeChild()메소드 : 문서 객체를 제거
+부모객체.removeChild(자식 객체)
+
+-appendChild()메소드 등으로 부모 객체와 이미 연결이 완료된 문서 객체의 경우
+parentNode 속성으로 부모 객체에 접근할 수 있으므로, 일반적으로 어떤 문서
+객체를 제거할 때는 다음과 같은 형태의 코드를 사용한다.
+문서객체.parentNode.removeChild(문서 객체)
+
+
+이벤트 모델
+-표준 이벤트 모델 : addEventListener()
+document.body.addEventListener('keyup',() => {
+})
+
+-고전 이벤트 모델: 문서 객체가 갖고 있는 onOO으로 시작하는 속성에 함수를 할당해서 이벤트를 연결 
+document.body.onkeyup=(event) => {  
+})   //onkeyup -> 속성
+
+-인라인 이벤트 모델: onOO으로 시작하는 속성을 HTML요소에 직접 넣어서 이벤트를 연결
+<script>
+const listener = (event) => {
+}
+</script>
+<body onkeyup="listner(event)">
+</body>
+
+키보드 이벤트
+keydown : 키가 눌릴 때 실행. 키보드를 꾹 누르고 있을 떄도, 입력될 때도 실행됨
+keypress : 키가 입력되었을 때 실행. 하지만 웹 브라우저에 따라서 아시아권의 문자(한국어,중국어,일본어)를 제대로 처리하지 못하는 문제가 있음
+keyup  : 키보드에서 키가 떨어질 때 실행
