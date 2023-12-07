@@ -1,0 +1,11 @@
+35일차  12-6
+
+jQuery       ch08~ch12
+
+
+exception
+
+
+jsp  -- java server page
+
+http://localhost:8080/jspPro/chap02/aaa.jsp?name=11&nickname=11&email=11%4011&address1=11&address2=11&root=%EC%B9%B4%ED%8E%98&code=11&aggrement=on   쿼리문자열
