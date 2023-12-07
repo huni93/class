@@ -1,0 +1,10 @@
+36일차  12-7
+
+jsp 
+
+mvc = 모델 2 (표현식)
+model view control = mvc
+
+<%! %>  -- 선언부 조건
+
+C:\Users\KITCOOP\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\work\Catalina\localhost\jspPro\org\apache\jsp\chap03
