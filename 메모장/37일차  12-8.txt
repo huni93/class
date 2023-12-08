@@ -6,3 +6,16 @@ jsp
 C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib
 --jdbcList
 
+Scope:
+request: 요청과 응답 간의 범위.
+session: 같은 브라우저의 모든 요청 간의 범위.
+
+유지 기간:
+request: 단일 요청 및 응답 사이에서만 유효.
+session: 브라우저가 열려 있는 동안 유지되며, 브라우저가 닫히거나 세션이 무효화될 때까지 유지.
+
+용도:
+request: 한 페이지에서 다른 페이지로 데이터 전달.
+session: 사용자 간의 상태 정보(로그인 정보 등) 유지 및 공유.
+
+즉, request는 단일 요청 사이에서 데이터를 전달하고, session은 같은 브라우저에서의 모든 요청 간에 데이터를 유지하고 공유합니다.
