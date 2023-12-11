@@ -1,0 +1,9 @@
+38일차  12-11
+
+jsp
+
+카드찍기!
+
+JDBC 
+java database connectivity
+
