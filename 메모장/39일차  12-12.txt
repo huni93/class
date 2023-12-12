@@ -1,0 +1,7 @@
+39일차  12-12
+
+jsp
+
+카드찍기!
+
+loginForm action,name, --> loginPro --> memberDao return m --> loginPro 
