@@ -1,0 +1,38 @@
+40일차  12-13
+
+jsp
+
+카드찍기!
+
+1. info에서 퍼센트 복사해서 updateForm 바디위에 붙인다
+
+2. updateForm  아이디에 value="<%=mem.getId() %>" 붙이고 readonly를 적용
+   (비밀번호 x ,체크는 지우기 ) 나머지 다적용
+
+3. memberUpdatePro.jsp 액션바꾸고 새로운 클래스
+
+4.<div class="invalid-feedback">전화번호를 입력해주세요.</div> 
+  이메일 전화번호 지우기 //  비밀번호는 주석처리
+
+5. memberupdatePro 하기
+
+6. dao 가서 위에꺼 복사하고 updatemember로 바꾸기 (순서)!
+
+7.member deleteForm 만들고 info에서 고치기 (value 랑 액션 바꾸기)
+method="post" 넣기
+
+8.memberDeletePro.jsp 만들기 
+
+9.memberpassForm 만들고 info고치고 col  12 로 고치고 추가 2개   
+onsubmit = "return passChk(this) 추가,method="post"추가
+스타일아래 
+<script>
+function passChk(form) {
+	
+	
+}
+</script>
+
+10. memberpassPro
+
+11.[<%=login%>]&nbsp;&nbsp; 헤드 에서 회원정보에 추가
