@@ -1,0 +1,7 @@
+41일차  12-14
+
+jsp       EL Expression Language
+
+카드찍기!
+
+core 태그엔 else 가 없다!!
