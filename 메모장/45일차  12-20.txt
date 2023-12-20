@@ -1,0 +1,83 @@
+45일차  12-20
+
+모델 2
+
+카드찍기!
+
+
+<h3>forEach 태그를 이용하여 List 객체 출력하기</h3> 
+jspcoreEx4 를 이용해서 주문목록 찍어보기!
+
+
+새로고침햇을때 로그인과 상관없이 프로세스가 진행되기 떄문에
+memberinfo에서 고쳐야한다.  @Login(key = "id")
+memberupdateform
+
+wepapp밑에 뷰 폴더만들고 alert 복사해서 넣기
+
+코어태그 추가  sessionScope 추가
+
+@WebServlet("/member/*") 추가하고 웹 xml 주석처리
+
+
+덧글 게시판 project 순서
+
+1)model 확정
+- create 테이블 board
+- getter / setter
+
+--Board
+create table board (
+num int primary key,
+name varchar(30),
+pass varchar(20),
+subject varchar(100),
+content varchar(4000),
+file1 varchar(100),
+regdate date,
+readcnt number(10),
+boardid varchar(1));  //게시판 분류
+ 
+create sequence boardseq;
+
+--Comment
+create table boardcomment (
+ser int primary key,
+num int, //board num
+content varchar(2000),
+regdate date);
+
+2) controller 작성 : boardcontroller
+@WebServlet("/board/*")
+
+3) service : url, jsp 연결
+@WebServlet("/board/*")
+public class BoardController extends MskimRequestMapping {
+
+	@RequestMapping("index") //~~/board/index
+	public String index(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		return "/WEB-INF/view/board/index.jsp";
+	}
+
+wepxml 추가
+
+4)
+db저장: ---> list ---> info ---> update,delete...
+
+db저장(insert, update, delete) : view --> service --> dao
+
+db read(select) : dao ---> service --> view
+
+
+
+
+jumunAdd?jno=${jum.jno}
+
+
+
+
+
+
+
+
+
