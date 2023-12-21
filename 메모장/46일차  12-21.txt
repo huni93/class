@@ -1,0 +1,16 @@
+46일차  12-21
+
+모델 2
+
+카드찍기!
+
+
+price 추가!
+
+문제점 .. 가격이 0으로 출력됨 .. 테이블 추가했고 , dao 햇고.. toString 까지 함  다른문제점을 찾아보기
+
+그다음 가격을 주문리스트에도 넣어야하는데 그럼 가격을 서브쿼리로 넣어아햠.
+select *  from cart a, jmnumber j
+where a.itemid = j.jno and a.userid = 1;
+
+아직 문제해결 ㄴㄴ
