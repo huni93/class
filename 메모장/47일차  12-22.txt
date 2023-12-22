@@ -1,0 +1,27 @@
+47일차  12-22
+
+모델 2
+
+카드찍기!
+
+게시판 dropdown 설정
+
+boardList에서
+String boardid = req.getParameter("boardid"); 찍고 
+dao에서 String 찍기
+셀렉트문 찍고 pstmt 찍기
+
+List이동간 분류를 리퀘스트말고 세션으로 한다.
+== board session 처리한다.
+
+쿼리작성으로 페이지설정.
+String sql = " select * from( "
+         		+ " select rownum rnum, a.* from ( "
+         		+ " select * from board where boardid = ? "
+         		+ " order by num desc) a) "
+         		+ " where rnum between ? and ? ";
+
+
+주문리스트 5개씩 끊어서 출력되게하기.
+
+수정! 주문리스트합계로출력하기!
