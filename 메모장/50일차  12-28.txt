@@ -20,3 +20,30 @@ GET은 POST보다 간단하고 빠르며 대부분의 경우 사용할 수 있�
 다). 
 사용자 입력 (알 수없는 문자가 포함될 수 있음)을 보내면 POST는 GET
 보다 강력하고 안전합니다.
+
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+
+
+
+
