@@ -1,4 +1,4 @@
-53일차  01-04
+54일차  01-05
 
 mybatis
 
@@ -24,8 +24,3 @@ mybatis
 - html, css, jacascript
 
 4)back end
-
-lib,
-mybatis 패키지,
-멤버 마이바티스 디에이오,
-멤버 컨트롤러에 마이바티스로 수정,
