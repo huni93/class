@@ -1,0 +1,28 @@
+55일차  01-08
+
+스프링 프레임워크
+
+springbase
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end

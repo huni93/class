@@ -1,0 +1,59 @@
+59일차  01-12
+
+AOP
+Aspect Oriented Programming 관점 지향 프로그래밍
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+--광훈--
+jumuncontroller-controller
+cartDao-dao
+cartMybatisDao-dao
+cart.xml- mybatis
+products.jsp - 경로설정
+cart.java - 셋터겟터
+<li><a href="${pageContext.request.contextPath}/jumun/jumunList">찜한상품</a></li>-head
+<li><a href="${pageContext.request.contextPath}/jumun/MyList">찜한상품</a></li>-head
+
+ <a href="${pageContext.request.contextPath}/jumun/jumunAdd?pnum=${b.pnum}" class="button">찜하기</a><p> --products
+
+
+<url-pattern>/WEB-INF/view/jumun/*</url-pattern> --webxml
+
+create table aproducts(
+ser varchar(30) primary key,
+userid varchar(30),
+itemid varchar(30));
+
+create sequence aproduct;
+
+테이블정리
+amem-회원정보
+auction-물품정보
+aproducts-cart(장바구니)
+
+
+ 
+
+

@@ -1,0 +1,48 @@
+57일차  01-10
+
+스프링 프레임워크
+
+springbase
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+jumuncontroller-controller
+cartDao-dao
+cartMybatisDao-dao
+cart.xml- mybatis
+products.jsp - 경로설정
+cart.java - 셋터겟터
+<li><a href="${pageContext.request.contextPath}/jumun/jumunList">찜한상품</a></li>-head
+
+테이블정리
+amem-회원정보
+auction-물품정보
+aproducts-cart(장바구니)
+
+
+
+
+AOP
+Aspect Oriented Programming 관점 지향 프로그래밍
+
