@@ -54,6 +54,15 @@ auction-물품정보
 aproducts-cart(장바구니)
 
 
+
+BoardMybatisDao = mainList
+board.xml- mainList
+MemberController-mainList
+
+아직 두가지문제점.
+1 새로 업데이트를하면 메인페이지에서는 업데이트가 되지않음.
+-- 사이트를 껏다가 켜서 메인페이지들어가면 등록되어있음 근데 새로고침이나 페                  이지이동했을경우 엔 업데이트가안됨.--해결
+2 다른카테고리에서 물품을올렸을때 등록되었는지 확인불가 - 해결
  
 
 

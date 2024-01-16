@@ -1,0 +1,81 @@
+61일차  01-15
+
+AOP
+Aspect Oriented Programming 관점 지향 프로그래밍
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+--광훈--
+boardList - 절대경로
+보드컨트롤러 - products
+products.jsp 경로
+
+-head.jsp
+<li><a href="">공지사항</a></li> <!-- 관리자만 글작성 -->
+<li><a href="">자주묻는질문</a></li> <!-- 관리자만 글작성 -->
+<li><a href="">1:1문의</a></li> <!-- amem에서 ID받아서 작성자뜨게 -->
+
+notice
+
+
+
+테이블정리
+amem-회원정보
+auction-물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+
+
+maven web project
+
+1. build path 
+2. pom.xml
+3. web.xml
+4. kicspring-servlet.xml (container)
+
+5. component-scan (controller, dao)
+6.@Controller
+   @RequestMapping("/board/")
+    public class BoardController  {
+   @Autowired
+   BoardMybatisDao bd ;
+   
+   @RequestMapping("boardPro")
+   public String boardPro() throws Exception {
+   
+7. @Component("bd")
+    public class BoardMybatisDao {
+   @Autowired
+   SqlSessionTemplate  sqlSession ;
+   
+8. workspace upload image는 지워진다 
+    C:/Users/KITCOOP/eclipse-workspace/
+     .metadata/.plugins/org.eclipse.wst.server.core/
+     tmp0/wtpwebapps/KicSpringMvc/image
+
+
+
+   
+
