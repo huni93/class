@@ -38,7 +38,26 @@ products.jsp 경로
 
 notice
 
+create table anotice (
+num int primary key,
+name varchar(30),
+pass varchar(20),
+subject varchar(100),
+content varchar(4000),
+file1 varchar(100),
+regdate date,
+readcnt number(10),
+boardid varchar(1));
 
+create sequence Anoticecomseq;
+commit;
+
+mybatis-config 추가
+notice.xml 추가
+notice controller, dao, model, mybatis 추가
+뷰 추가 
+헤더 경로추가
+ 
 
 테이블정리
 amem-회원정보
@@ -77,5 +96,5 @@ maven web project
 
 
 
-   
+
 
