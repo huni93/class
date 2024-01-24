@@ -1,0 +1,67 @@
+68일차  01-24
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+--광훈--
+boardList - 절대경로
+보드컨트롤러 - products
+products.jsp 경로
+
+
+notice
+
+create table anotice (
+num int primary key,
+name varchar(30),
+pass varchar(20),
+subject varchar(100),
+content varchar(4000),
+file1 varchar(100),
+regdate date,
+readcnt number(10),
+boardid varchar(1));
+
+create sequence Anoticecomseq;
+commit;
+
+mybatis-config 추가
+notice.xml 추가
+notice controller, dao, model, mybatis 추가
+뷰 추가 
+헤더 경로추가
+ 
+mynotice = controller , Dao, xml, jsp
+
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+
+1월 26일 = 중간발표  -- ppt중점 (완성도가 높아야함) -- 포트폴리오형식
+
+2월 2일 = 최종발표

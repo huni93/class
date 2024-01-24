@@ -210,3 +210,5 @@ memberController
 
 
 notice마이바티스 네임안넘어감
+
+pagenum이 로그인한 id로 인식중이였음
