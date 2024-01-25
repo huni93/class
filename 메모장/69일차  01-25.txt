@@ -1,0 +1,135 @@
+69일차  01-25
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+--광훈--
+boardList - 절대경로
+보드컨트롤러 - products
+products.jsp 경로
+
+
+notice
+
+create table anotice (
+num int primary key,
+name varchar(30),
+pass varchar(20),
+subject varchar(100),
+content varchar(4000),
+file1 varchar(100),
+regdate date,
+readcnt number(10),
+boardid varchar(1));
+
+create sequence Anoticecomseq;
+commit;
+
+mybatis-config 추가
+notice.xml 추가
+notice controller, dao, model, mybatis 추가
+뷰 추가 
+헤더 경로추가
+ 
+mynotice = controller , Dao, xml, jsp
+
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+
+1월 26일 = 중간발표  -- ppt중점 (완성도가 높아야함) -- 포트폴리오형식
+
+2월 2일 = 최종발표
+
+
+@Autowired
+CartMybatisDao cd;  
+-- 모든 컨트롤러에 오토와이드 
+
+
+String Tier = cd.tier(id); 또는 login 상황에맞춰서
+req.setAttribute("Tier", Tier);-- 고정
+
+
+-cart xml
+<select id="Tier" parameterType="string" resultType="String">
+ SELECT Tier FROM
+    (
+        SELECT
+            COUNT(pnum) as total_pnum,
+            CASE
+                WHEN COUNT(pnum) &lt; 3 THEN 'Silver'
+                WHEN COUNT(pnum) BETWEEN 4 AND 6 THEN 'Gold'
+                WHEN COUNT(pnum) BETWEEN 7 AND 10 THEN 'Platinum'
+                ELSE 'Diamond'
+            END AS Tier
+        FROM
+            auction
+        WHERE
+            userid = #{userid}
+        GROUP BY
+            userid
+    ) 
+    </select>
+
+
+public String tier(String userid) throws UnsupportedEncodingException, SQLException {
+
+	      return sqlSession.selectOne(ns + "Tier", userid);
+
+	   }   Dao 추가
+
+
+products, main  에 
+<form action="/search" method="GET">
+    <input type="text" name="query" placeholder="상품 검색">
+    <button type="submit">검색</button>
+</form>
+붙이기
+
+
+조회수----------------------------
+boardcontroller ===== boardInfo에
+bd.cntBoard(num); 붙이기
+
+  public int cntBoard(int pnum) {
+		   return sqlSession.update(ns + "cntBoard", pnum);
+		} ------dao
+
+<insert id="cntBoard" parameterType="Auction">
+UPDATE auction 
+        SET readcnt = readcnt + 1 
+        WHERE pnum = #{pnum}
+ </insert>----------board.xml
+
+<tr>
+<th>조회수</th>
+<td>${board.readcnt}</td>
+</tr> ----------boardInfo.jsp
+
+
