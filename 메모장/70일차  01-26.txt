@@ -1,0 +1,107 @@
+70일차  01-26
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+플랫폼에 쓸 내용 
+텍스트자료(샘플자료 , 이미지) 좀 디테일하게 
+팀프로젝트 동영상? 동영상 컷 (키포인트)
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+
+2월 2일 = 최종발표
+
+1 -26 작업  조회순- 가격높은순-낮은순
+auction 테이블 drop
+
+create table auction(
+pnum int primary key,
+pname varchar(20) ,
+price int,
+prompt varchar(200) ,
+subject varchar(100) ,
+content varchar(4000) ,
+pass varchar(20) ,
+readcnt int,
+file1 varchar(100), 
+boardid varchar(4) ,
+regdate date,
+userid varchar(20),
+buy varchar(30),
+buyid varchar(30),
+idate date
+);
+commit;
+
+getter setter 바꾸기
+
+@RequestMapping("cntList")
+	public String cntList(Model model, String pname) throws Exception {		
+		System.out.println(pname);
+		
+		
+		List<Auction>  li = bd.cntList(pname);
+		
+		model.addAttribute("li",li);
+		System.out.println(li);
+	    	
+		return "member/index";
+	} -------컨트롤러
+
+ public List<Auction> cntList(String pname) throws UnsupportedEncodingException, SQLException {
+	       if (pname.equals("priced")) { pname = "price desc, readcnt desc";
+	   } else {
+		   pname ="readcnt desc"; 
+	   }
+		   return sqlSession.selectList(ns + "cntList", pname);
+	   } ------------- Dao
+
+
+<select id="cntList" parameterType="string" resultType="auction">
+   SELECT * FROM auction ORDER BY ${value} 
+</select> ----------xml
+
+
+
+
+
+
+랭크시스템에 관한 포인트 ,  배송처  품), 결제
+
+검색기능 에 따른 추천 ?   , 최근 본상품
+
+  신고기능에 대한 다른회원들에게 알리는 리포트/패널티/
+
+경매에대한 리포트... 예시) 경매실패하거나 다른사람이 더높은금액을제시하면 연락이간다?.. 
+
+
+댓글 -- 추천수!
+
+email - ajax 자동완성
+  
