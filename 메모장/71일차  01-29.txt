@@ -1,0 +1,95 @@
+71일차  01-29
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+플랫폼에 쓸 내용 
+텍스트자료(샘플자료 , 이미지) 좀 디테일하게 
+팀프로젝트 동영상? 동영상 컷 (키포인트)
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+
+2월 2일 = 최종발표
+
+랭크시스템에 관한 포인트 ,  배송처  품), 결제
+
+검색기능 에 따른 추천 ?   , 최근 본상품
+
+email - ajax 자동완성
+
+
+
+head 에 board 로 경로설정 jumun X
+
+전부 보드쪽으로 ㄱㄱ 
+
+
+@RequestMapping("buyList")
+	
+	public String buyList() throws Exception {
+		
+		String login = (String) session.getAttribute("id");
+		
+		Amem mem = md.oneMember(login);	
+		req.setAttribute("amem", mem);
+		
+		String Tier = cd.tier(login); 
+		req.setAttribute("Tier", Tier);
+		
+        String id = (String) session.getAttribute("id");
+        List<Auction>  li = bd.buyList(id);
+
+        System.out.println(li);
+		req.setAttribute("li", li);
+		
+		return "board/buyList";
+	}	---------------board 컨트롤러 
+
+ public List<Auction> buyList(String id) throws SQLException {
+		
+		return sqlSession.selectList(ns+"buyList", id);
+
+		}-------------baord dao
+
+
+<select id="buyList" parameterType="string" resultType="Auction">
+		SELECT a.*
+		FROM auction a
+		INNER JOIN amem m ON a.buyid = m.id
+		WHERE a.buyid IS NOT NULL
+		AND m.id = #{loggedInUserId}
+	</select>  ----board.xml
+
+
+
+
+
+
+
+  
