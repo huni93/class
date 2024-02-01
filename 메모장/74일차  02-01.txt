@@ -1,0 +1,109 @@
+74일차  02-01
+
+카드찍기!
+
+팀프로젝트 
+
+1) ppt  (proto)
+- project 내용 :
+
+-sample 사이트를 이용 : 장단점 
+보완점 구축 /
+
+2) 요구 분석 :(기획)
+  - 디테일한 요구분석(site map)
+
+ - model(table,bean)
+   ERD 확정  *****
+
+
+3) view 
+- proto type
+- html, css, jacascript
+
+4)back end
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+aboardcomment-댓글
+areport- 신고기능
+abuyList- 경매기록
+apay - 최종낙찰기록
+
+2월 2일 = 최종발표
+
+
+테이블에 point 빼기
+
+<!-- point 사용  sum = 누적 마일리지, sum2 = 누적금액, sum3 = 마일리지를 넣고 사용하기 버튼누를시 나오는금액 , sp = 사용마일리지 -->
+    <select id="sum" parameterType="string" resultType="long">
+    select sum(buy*0.05) from apay where id=#{id}
+</select>
+
+----cart. xml
+<select id="sum2" parameterType="string" resultType="long">
+   select sum(buy) from apay where id=#{id}
+</select>
+
+-----cartmybatis
+public String sum(String id) throws UnsupportedEncodingException, SQLException {
+		Long result = sqlSession.selectOne(ns + "sum", id);
+		return result != null ? result.toString() : "0";
+	}
+
+	public String sum2(String id) throws UnsupportedEncodingException, SQLException {
+		Long result = sqlSession.selectOne(ns + "sum2", id);
+		return result != null ? result.toString() : "0";
+	}
+
+========= 여기까진 뷰에 나타내는 누적마일리지와 누적금액 
+
+마일 리지 사용 은  checkout.jsp에서 id 를 각 설정해준뒤 
+펑션 ㄱㄱ맨밑 펑션 추가
+function calc() {
+    	  let sum = document.querySelector("#sum").innerHTML
+          let sp = document.querySelector("#sp").value
+          let buy = document.querySelector("#buy").innerHTML
+          console.log(sum, sp, buy)
+          sum=parseInt(sum)
+          sp=parseInt(sp)
+          buy=parseInt(buy)
+          let bal = buy - sp
+          
+          document.querySelector("#bal").innerHTML=bal
+      }
+
+=========bal==최종결제금액    , ${board.buy} 에 '원' 을 span태그 밖에 쓰기
+
+<tbody>
+
+							<tr>
+								<td><span style="font-size: 25px; font-weight: bold;">마일리지 
+										사용</span> 마일리지: <span style="font-size: 15px; font-weight: bold;" id="sum">${sum}</span>
+									<br> <input type="text"  id="sp">
+								<button type="button" onclick="calc()">사용하기</button>
+									<p>
+										&nbsp;<br>총 결제금액:<span
+											style="font-size: 15px; font-weight: bold;"  id="bal">${board.buy}</span></td>
+							</tr>
+
+						</tbody> 
+========각 총마일리지, 사용 마일리지, 최종결제 금액 id=설정, 사용하기 원클릭버튼  calc 설정
+
+=====checkout.jsp 추가
+let sp = document.querySelector("#sp").value
+		
++"&sp="+sp
++"&buy="+bal
+&buy=${board.buy} -- 지우기
+<span id="buy"   style="display: none;">${board.buy}</span> 이걸먼저찍고
+
+<span   
+												style="color: blue; font-weight: bold; font-size: 20px;">
+												<fmt:formatNumber value="${board.buy}" pattern="#,##0" />
+											</span>원 이렇게 찍어야 , 에러 피할수잇음 
