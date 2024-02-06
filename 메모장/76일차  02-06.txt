@@ -1,0 +1,59 @@
+76일차  02-06
+
+카드찍기!
+
+spring boots
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+aboardcomment-댓글
+areport- 신고기능
+abuyList- 경매기록
+apay - 최종낙찰기록
+
+cntBoard--조회수
+
+upcnt,getupcnt -- 댓글추천
+ 
+boardcount -- 페이지당 상품 갯수
+
+maxbuycnt -- 경매기록(입찰수) 
+  
+2월 2일 = 최종발표
+
+<!-- point 사용  sum = 누적 마일리지, sum2 = 누적금액, sum3 = 마일리지를 넣고 사용하기 버튼누를시 나오는금액 , sp = 사용마일리지 -->
+   
+
+===================피드백=================
+02개발환경
+---- 스프링mvc ,, 마이바티스,, 결제 토스관련  추가!
+
+회원 활동 정지 기록
+== 인터셉터기능 활용 
+
+프로젝트에 관한 컨텐트 
+ppt에 컨트롤러 /dao / 컨테이너 꼭 넣어야함 
+컨트롤러마다 역활 설명
+리허설필요 
+개인별 프로젝트 후기(리얼 보단 긍정적으로)  
+
+   <dependency>
+        <groupId>com.kic</groupId>
+        <artifactId>KicSpringMvc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+--없애기 pom.xml
+
+bal ->총 결제 금액
+sum -> 누적 마일리지
+buy -> 구매 금액
+bal2 -> 는 누적 마일리지에서 마일리지를 사용하고 남은 금액
+sp ->사용한 마일리지
+
+sum - sp = bal2
+====================
+출퇴근 오픈 cv == 파이썬
