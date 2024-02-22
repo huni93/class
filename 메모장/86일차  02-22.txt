@@ -1,0 +1,113 @@
+86일차  02-22
+
+카드찍기!
+
+django
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+aboardcomment-댓글
+areport- 신고기능
+abuyList- 경매기록
+apay - 최종낙찰기록
+
+cntBoard--조회수
+
+upcnt,getupcnt -- 댓글추천
+ 
+boardcount -- 페이지당 상품 갯수
+
+maxbuycnt -- 경매기록(입찰수) 
+  
+2월 2일 = 최종발표
+
+===================피드백=================
+02개발환경
+---- 스프링mvc ,, 마이바티스,, 결제 토스관련  추가!
+ 
+회원 활동 정지 기록
+== 인터셉터기능 활용 
+
+프로젝트에 관한 컨텐트 
+ppt에 컨트롤러 /dao / 컨테이너 꼭 넣어야함 
+컨트롤러마다 역활 설명
+리허설필요 
+개인별 프로젝트 후기(리얼 보단 긍정적으로)  
+
+   <dependency>
+        <groupId>com.kic</groupId>
+        <artifactId>KicSpringMvc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+--없애기 pom.xml
+
+bal ->총 결제 금액
+sum -> 누적 마일리지
+buy -> 구매 금액
+bal2 -> 는 누적 마일리지에서 마일리지를 사용하고 남은 금액
+sp ->사용한 마일리지
+
+====================
+건의 물픔들록 버튼!
+
+============================================
+
+1) manage
+
+2) url
+    path("member/", include("member.urls")), #namespace-->
+    path("index/", views.index, name = "index"),   --->
+
+    def index(request) :
+    return render(request, 'member/index.html') #templates
+
+
+=================================prompt
+maria db prompt
+
+create user 'kic'@localhost identified by '1111'; 
+GRANT ALL PRIVILEGES ON kicdb.* TO 'kic'@localhost IDENTIFIED BY '1111';
+
+anaconda prompt
+python manage.py migrate 
+
+python manage.py makemigrations member, board
+
+cmd
+mysql -ukic -p
+1111
+use kicdb;
+show tables;
+select * from member_member;
+
+ 
+환경변수! mariadb -> bin
+
+pip install Django
+pip install mysqlclient 
+
+
+
+=====================================이력서참고자료
+python 부분은 좀더 디테일하게 회사입장에 맞춰서 
+ai 는 팀프로젝트에 맞춰서
+
+
+그래들?
+
+
+
+
+
+
+
+
+
+
+
+
+
