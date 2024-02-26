@@ -1,4 +1,4 @@
-87일차  02-23
+89일차  02-26
 
 카드찍기!
 
@@ -90,10 +90,7 @@ select * from member_member;
 pip install Django
 pip install mysqlclient 
 
-drop database kicdb;
-create database kicdb;
-use kicdb;
-show tables;
+
 
 =====================================이력서참고자료
 python 부분은 좀더 디테일하게 회사입장에 맞춰서 
