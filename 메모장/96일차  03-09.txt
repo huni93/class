@@ -1,0 +1,196 @@
+96일차  03-09
+
+카드찍기!
+
+
+테이블정리
+amem-회원정보
+auction-board물품정보
+aproducts-cart(장바구니)
+admin- 관리자
+notice- 게시판
+aboardcomment-댓글
+areport- 신고기능
+abuyList- 경매기록
+apay - 최종낙찰기록
+
+cntBoard--조회수
+
+upcnt,getupcnt -- 댓글추천
+ 
+boardcount -- 페이지당 상품 갯수
+
+maxbuycnt -- 경매기록(입찰수) 
+  
+
+
+===================피드백=================
+02개발환경
+---- 스프링mvc ,, 마이바티스,, 결제 토스관련  추가!
+ 
+회원 활동 정지 기록
+== 인터셉터기능 활용 
+
+프로젝트에 관한 컨텐트 
+ppt에 컨트롤러 /dao / 컨테이너 꼭 넣어야함 
+컨트롤러마다 역활 설명
+리허설필요 
+개인별 프로젝트 후기(리얼 보단 긍정적으로)  
+
+   <dependency>
+        <groupId>com.kic</groupId>
+        <artifactId>KicSpringMvc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+     </dependency>
+--없애기 pom.xml
+
+bal ->총 결제 금액
+sum -> 누적 마일리지
+buy -> 구매 금액
+bal2 -> 는 누적 마일리지에서 마일리지를 사용하고 남은 금액
+sp ->사용한 마일리지
+
+====================
+중간 발표 - 3월 15일 (금요일) 10시 
+
+1. ppt : spring project ppt에 python flask 나 django 포함
+2. 시연 : spring (java) web, python web
+
+
+Final 발표  - 3월 29일(금요일)  10시
+
+동영상 촬영 합니다 
+1. ppt : spring project ppt에 python flask 나 django 포함
+2. 시연 : spring (java) web, python web
+
+============================================
+
+1) manage
+
+2) url
+    path("member/", include("member.urls")), #namespace-->
+    path("index/", views.index, name = "index"),   --->
+
+    def index(request) :
+    return render(request, 'member/index.html') #templates
+
+
+=================================prompt
+maria db prompt
+
+create user 'kic'@localhost identified by '1111'; 
+GRANT ALL PRIVILEGES ON kicdb.* TO 'kic'@localhost IDENTIFIED BY '1111';
+
+anaconda prompt
+python manage.py migrate 
+
+python manage.py makemigrations member, board
+
+cmd
+mysql -ukic -p
+1111
+use kicdb;
+show tables;
+select * from member_member;
+
+ 
+환경변수! mariadb -> bin
+
+pip install Django
+pip install mysqlclient 
+
+
+
+=====================================이력서참고자료
+python 부분은 좀더 디테일하게 회사입장에 맞춰서 
+ai 는 팀프로젝트에 맞춰서
+
+
+=================================================
+
+대출 채무 불이행 예측:
+ 주어진 고객 정보 및 대출 관련 데이터를 사용하여 해당 고객이 대출 채무를 이행할지 여부를 예측하는 모델을 구축할 수 있습니다. 이를 위해 이진 분류 모델을 활용하고, 대출 채무 불이행 여부를 예측하는데 중요한 변수들을 선택하여 모델링할 수 있습니다.
+/연체 가능성/ 
+
+대출 금액 또는 대출 기간 예측:
+ 주어진 고객 정보를 바탕으로 대출 금액이나 대출 기간을 예측하는 모델을 구축할 수 있습니다. 이를 위해 회귀 모델을 활용하여 대출 금액 또는 대출 기간을 예측하는데 중요한 변수들을 고려하여 모델을 학습시킬 수 있습니다.
+
+고객 신용 등급 분류:
+ 고객의 대출 등급을 분류하는 모델을 구축할 수 있습니다. 이를 위해 다중 클래스 분류 모델을 활용하여 고객의 대출 등급을 예측하는데 관련된 변수들을 고려하여 모델을 학습시킬 수 있습니다.
+
+대출 목적 분석:
+ 고객들의 대출 목적에 따른 특성을 분석하고, 대출 목적에 따른 대출 채무 이행 여부나 대출 금액 등을 예측하는 모델을 구축할 수 있습니다.
+
+고객 세분화 및 마케팅 전략 수립:
+ 주어진 데이터를 활용하여 고객을 세분화하고, 각 고객 세그먼트별로 다른 대출 상품을 제공하거나 마케팅 전략을 수립하는데 활용할 수 있습니다.
+
+
+
+총연체금액이 0이 아닌거 -- 27%
+
+총상환원금이 0 이 아닌거 -- 83% 
+
+del origin["총계좌수"] -- 83%
+
+origin = origin[origin['총상환이자'] != 0] --82%
+
+
+=============================================
+#save model
+model.save("model/numbermnist.h5")
+
+#model load
+model = load_model('model/numbermnist.h5') #read model
+
+onetest = model.predict(numpyimage)
+
+#read 하는것
+
+with open('open/maxtot.pkl', 'rb') as f:
+     maxtot = pickle.load(f)      
+  
+#read 하는것
+with open('open/mintot.pkl', 'rb') as f:
+     mintot = pickle.load(f) # 단 한줄씩 읽어옴', 'rb') as f:
+
+
+
+===========================
+
+처음 기본 자료로 했을때 나오는 acc 로 찍은 그래플 67프로엿나 암튼그거 캡쳐하고 
+
+추가로 83퍼까지 올린 acc 그래프를 캡쳐해서 나중에 발표에 이런식으로 acc올렷다고 
+
+발표할것. 
+
+<li><a href="http://127.0.0.1:6001/?id=${id}">내 대출 등급 확인하기</a></li>
+head.jsp
+
+create table loanservice (
+id varchar(20) primary key,
+대출금액 int,
+대출기간 int,
+근로기간 int,
+주택소유상태 int,
+연간소득 int,
+부채_대비_소득_비율 FLOAT(10,2),
+최근_2년간_연체_횟수 int,
+총상환원금 int,
+총상환이자 int,
+총연체금액 int,
+연체계좌수 int,
+대출등급 int,
+대출금액_대출기간비율 int,
+이자율 FLOAT(25,22));
+
+http://127.0.0.1:6001/?id=1
+
+========================================
+멘토 2일차
+
+devops 와 mlops 를 활용한 꾸미기?
+
+mlops 자료를 순환 해서 돌리기때문에 자료가 점차쌓이고 그걸 토대로 예측 정확도상승 
+계속발전!
+포폴에 올릴 스토리 상 필요한 dB 구축
+
